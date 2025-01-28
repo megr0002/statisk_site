@@ -1,0 +1,70 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************** Main *********************/
+
+.category_list_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px 10px 0 10px;
+}
+
+.category {
+  background-color: gray;
+  padding: 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/************ Productlist *************/
+
+.sold_out {
+  /** skal sættes class på selve billedet **/
+  position: absolute;
+  top: ;
+  left: ;
+  background-color: grey;
+  opacity: 40%;
+  filter: blur(2px);
+}
+
+.discount {
+  /** skal sættes på "kassen" **/
+  position: absolute;
+  background-color: red;
+  padding: 3px;
+  color: black;
+  font-weight: bold;
+  box-shadow: 10px 10px 5px lightgrey;
+}
+
+/************** Product *****************/
+
+@media screen and (min-width: 800px) {
+  /************ Main desktop *************/
+  .category_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-block: 50px;
+    padding-inline: 50px;
+  }
+
+  /*********** Productlist desktop **********/
+
+  /*********** Product desktop *************/
+}
