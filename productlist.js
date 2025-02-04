@@ -1,7 +1,10 @@
 /************** Alle proukter på listen linker til ét bestemt produkt nu *******************/
+
+const category = new URLSearchParams(window.location.search).get("category");
+
 const listContainer = document.querySelector(".product_list_container");
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=100`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
@@ -17,7 +20,14 @@ function showList(products) {
                 <div>
                     <p class="brand">${product.brandname}</p>
                     <p>${product.price}DKK</p>
-                    <a href="product.html">Se mere</a>
+
+                      <div class="discount ${product.discount && "isVisible"}">${product.discount}%</div>
+
+
+
+                <div class="sold_out ${product.soldout && "isVisible"}">Sold Out</div>
+                
+                    <a href="product.html?id=${product.id}">Se mere</a>
                 </div>
             </div>`;
     })

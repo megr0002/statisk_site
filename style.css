@@ -79,6 +79,7 @@ p {
   padding: 10px;
 }
 .kort {
+  position: relative;
   display: grid;
   grid-template-rows: subgrid;
   gap: 10px;
@@ -88,10 +89,12 @@ p {
 }
 
 .sold_out {
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
   background-color: gray;
+  color: black;
   padding: 20px;
 }
 .sold_out-img {
@@ -99,13 +102,20 @@ p {
 }
 
 .discount {
-  /** skal sættes på "kassen" **/
+  visibility: hidden;
   position: absolute;
   background-color: darkred;
   padding: 3px;
   color: white;
   font-weight: bold;
   box-shadow: 3px 3px 1px lightgrey;
+}
+.sold_out_product {
+  visibility: hidden;
+  margin-top: 10%;
+  background-color: gray;
+  color: black;
+  padding: 20px;
 }
 
 /************** Product *****************/
@@ -274,4 +284,10 @@ footer p {
   flex-direction: column;
   padding: 2vw;
   text-align: center;
+}
+
+/*********** fra timen *******/
+
+.isVisible {
+  visibility: visible;
 }
